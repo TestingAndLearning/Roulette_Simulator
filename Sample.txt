@@ -1,0 +1,6 @@
+Only bet Green when last 20 Or More rounds were Not Green. 
+Over last 50 games, only bet when 
+Red is 50 to 60 percent
+Black is 40 to 50 percent
+Green is 0 to 8 percent
+If I lose, bet double my last bet up to $100 on the next round

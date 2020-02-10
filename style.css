@@ -1,0 +1,22 @@
+.red 
+{
+    background-color: red;
+    border-radius: 100%;
+}
+.black 
+{
+    background-color: black;
+    border-radius: 100%;
+}
+
+table
+{
+    table-layout: fixed;
+    word-wrap: break-word;
+    background-color: green;
+}
+
+td, th
+{
+    color: white;
+}
