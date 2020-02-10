@@ -5,93 +5,174 @@
     <title>The System</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
   </head>
   <body>
     <div id='wrapper'>
-        <div id='pieChart'>Pie Chart</div>
+      <div style='text-align: center; font-weight: bold;'>
+        <h1>The System</h1>
+      </div>
+      <!-- Top Section -->
+      <div style='display: inline-block'>
+        <div id='piechart' style='float: left; width: 300px; height: 300px; margin-bottom: 50px;'>Pie Chart</div>
+        <div style='height: 300px; float: left; width: 300px; margin: 50px; margin-left: 300px;'>
+          <div style='font-weight: bold;'>Number Occurrences: </div> <br>
+          <div></div><br>
+          <span class='occurrences'><span>1: </span><span id='oc_one'>0</span></span><span class='occurrences'><span>11: </span><span id='oc_eleven'>0</span></span><span class='occurrences'><span>21: </span><span id='oc_twentyOne'>0</span></span><span class='occurrences'><span>31: </span><span id='oc_thirtyOne'>0</span></span><br>
+          <span class='occurrences'><span>2: </span><span id='oc_two'>0</span></span><span class='occurrences'><span>12: </span><span id='oc_twelve'>0</span></span><span class='occurrences'><span>22: </span><span id='oc_twentyTwo'>0</span></span><span class='occurrences'><span>32: </span><span id='oc_thirtyTwo'>0</span></span><br>
+          <span class='occurrences'><span>3: </span><span id='oc_three'>0</span></span><span class='occurrences'><span>13: </span><span id='oc_thirteen'>0</span></span><span class='occurrences'><span>23: </span><span id='oc_twentyThree'>0</span></span><span class='occurrences'><span>33: </span><span id='oc_thirtyThree'>0</span></span><br>
+          <span class='occurrences'><span>4: </span><span id='oc_four'>0</span></span><span class='occurrences'><span>14: </span><span id='oc_fourteen'>0</span></span><span class='occurrences'><span>24: </span><span id='oc_twentyFour'>0</span></span><span class='occurrences'><span>34: </span><span id='oc_thirtyFour'>0</span></span><br>
+          <span class='occurrences'><span>5: </span><span id='oc_fibe'>0</span></span><span class='occurrences'><span>15: </span><span id='oc_fifteen'>0</span></span><span class='occurrences'><span>25: </span><span id='oc_twentyFive'>0</span></span><span class='occurrences'><span>35: </span><span id='oc_thirtyFive'>0</span></span><br>
+          <span class='occurrences'><span>6: </span><span id='oc_six'>0</span></span><span class='occurrences'><span>16: </span><span id='oc_sixteen'>0</span></span><span class='occurrences'><span>26: </span><span id='oc_twentySix'>0</span></span><span class='occurrences'><span>36: </span><span id='oc_thirtySix'>0</span></span><br>
+          <span class='occurrences'><span>7: </span><span id='oc_seven'>0</span></span><span class='occurrences'><span>17: </span><span id='oc_seventeen'>0</span></span><span class='occurrences'><span>27: </span><span id='oc_twentySeven'>0</span></span><span class='occurrences'><span>0: </span><span id='oc_zero'>0</span></span><br>
+          <span class='occurrences'><span>8: </span><span id='oc_eight'>0</span></span><span class='occurrences'><span>18: </span><span id='oc_eighteen'>0</span></span><span class='occurrences'><span>28: </span><span id='oc_twentyEight'>0</span></span><span class='occurrences'><span>00: </span><span id='oc_zeroZero'>0</span></span><br>
+          <span class='occurrences'><span>9: </span><span id='oc_nine'>0</span></span><span class='occurrences'><span>19: </span><span id='oc_nineteen'>0</span></span><span class='occurrences'><span>29: </span><span id='oc_twentyNine'>0</span></span><br>
+          <span class='occurrences'><span>10: </span><span id='oc_ten'>0</span></span><span class='occurrences'><span>20: </span><span id='oc_twenty'>0</span></span><span class='occurrences'><span>30: </span><span id='oc_thirty'>0</span></span><br>
+        </div>
+        <div id='history' style='height: 300px; float: left; width: 300px; margin: 50px; font-weight: bold;'>History</div>
+        <div id='bet' style='height: 300px; float: left; width: 300px; margin: 50px; font-weight: bold;'>Bet</div>
+        <br>
+      </div>
+      <!-- End of Top Section -->
+        
         <div id='rouletteTable' style='margin: 20px;'>
-            <table class="table table-bordered" style='text-align: center; margin-bottom: 0px;'>
+            <table class="table table-bordered" style='text-align: center; margin-bottom: 0px; table-layout: fixed;word-wrap: break-word; background-color: green;'>
                 <tbody>
                   <tr>
                     <td rowspan=3 id='zeroZero' class='green'>00</td>
-                    <td rowspan=2 class='red'>3</th>
-                    <td rowspan=2 class='black'>6</td>
-                    <td rowspan=2 class='red'>9</td>
-                    <td rowspan=2 class='red'>12</td>
-                    <td rowspan=2 class='black'>15</td>
-                    <td rowspan=2 class='red'>18</td>
-                    <td rowspan=2 class='red'>21</td>
-                    <td rowspan=2 class='black'>24</td>
-                    <td rowspan=2 class='red'>27</td>
-                    <td rowspan=2 class='red'>30</td>
-                    <td rowspan=2 class='black'>33</td>
-                    <td rowspan=2 class='red'>36</td>
-                    <td rowspan=2 class='twoToOne'>2 to 1</td>
+                    <td rowspan=2 id='three' class='red'>3</th>
+                    <td rowspan=2 id='six' class='black'>6</td>
+                    <td rowspan=2 id='nine' class='red'>9</td>
+                    <td rowspan=2 id='twelve' class='red'>12</td>
+                    <td rowspan=2 id='fifteen' class='black'>15</td>
+                    <td rowspan=2 id='eighteen' class='red'>18</td>
+                    <td rowspan=2 id='twentyOne' class='red'>21</td>
+                    <td rowspan=2 id='twentyFour' class='black'>24</td>
+                    <td rowspan=2 id='twentySeven' class='red'>27</td>
+                    <td rowspan=2 id='thirty' class='red'>30</td>
+                    <td rowspan=2 id='thirtyThree' class='black'>33</td>
+                    <td rowspan=2 id='thirtySix' class='red'>36</td>
+                    <td rowspan=2 id='' class='twoToOne'>2 to 1</td>
                   </tr>
                   <tr></tr>
                   <tr>
-                    <td rowspan=2 class='black'>2</td>
-                    <td rowspan=2 class='red'>5</td>
-                    <td rowspan=2 class='black'>8</td>
-                    <td rowspan=2 class='black'>11</td>
-                    <td rowspan=2 class='red'>14</td>
-                    <td rowspan=2 class='black'>17</td>
-                    <td rowspan=2 class='black'>20</td>
-                    <td rowspan=2 class='red'>23</td>
-                    <td rowspan=2 class='black'>26</td>
-                    <td rowspan=2 class='black'>29</td>
-                    <td rowspan=2 class='red'>32</td>
-                    <td rowspan=2 class='black'>35</td>
-                    <td rowspan=2 class='twoToOne'>2 to 1</td>
+                    <td rowspan=2 id='two' class='black'>2</td>
+                    <td rowspan=2 id='five' class='red'>5</td>
+                    <td rowspan=2 id='eight' class='black'>8</td>
+                    <td rowspan=2 id='eleven' class='black'>11</td>
+                    <td rowspan=2 id='fourteen' class='red'>14</td>
+                    <td rowspan=2 id='seventeen' class='black'>17</td>
+                    <td rowspan=2 id='twenty' class='black'>20</td>
+                    <td rowspan=2 id='twentyThree' class='red'>23</td>
+                    <td rowspan=2 id='twentySix' class='black'>26</td>
+                    <td rowspan=2 id='twentyNine' class='black'>29</td>
+                    <td rowspan=2 id='thirtyTwo' class='red'>32</td>
+                    <td rowspan=2 id='thirtyFive' class='black'>35</td>
+                    <td rowspan=2 id='' class='twoToOne'>2 to 1</td>
                   </tr>
                   <tr>
                     <td rowspan=3 id='zero' class='green'>0</td>
                   </tr>
                   <tr>
-                    <td rowspan=2 class='red'>1</th>
-                    <td rowspan=2 class='black'>4</td>
-                    <td rowspan=2 class='red'>7</td>
-                    <td rowspan=2 class='black'>10</td>
-                    <td rowspan=2 class='black'>13</td>
-                    <td rowspan=2 class='red'>16</td>
-                    <td rowspan=2 class='red'>19</td>
-                    <td rowspan=2 class='black'>22</td>
-                    <td rowspan=2 class='red'>25</td>
-                    <td rowspan=2 class='black'>28</td>
-                    <td rowspan=2 class='black'>31</td>
-                    <td rowspan=2 class='red'>34</td>
-                    <td rowspan=2 class='twoToOne'>2 to 1</td>
+                    <td rowspan=2 id='one' class='red'>1</th>
+                    <td rowspan=2 id='four' class='black'>4</td>
+                    <td rowspan=2 id='seven' class='red'>7</td>
+                    <td rowspan=2 id='ten' class='black'>10</td>
+                    <td rowspan=2 id='thirteen' class='black'>13</td>
+                    <td rowspan=2 id='sixteen' class='red'>16</td>
+                    <td rowspan=2 id='nineteen' class='red'>19</td>
+                    <td rowspan=2 id='twentyTwo' class='black'>22</td>
+                    <td rowspan=2 id='twentyFive' class='red'>25</td>
+                    <td rowspan=2 id='twentyEight' class='black'>28</td>
+                    <td rowspan=2 id='thirtyOne' class='black'>31</td>
+                    <td rowspan=2 id='thirtyFour' class='red'>34</td>
+                    <td rowspan=2 id='' class='twoToOne'>2 to 1</td>
                   </tr>
                 </tbody>
               </table>
-              <table class="table table-bordered" style='text-align: center; margin-top: 0px; margin-bottom: 0px;'>
+              <table class="table table-bordered" style='text-align: center; margin-bottom: 0px; table-layout: fixed;word-wrap: break-word; background-color: green;'>
                   <tbody>
                     <tr>
                         <td></td>
-                        <td class='twelve' id='oneToTwelve' colspan=4>1-12</td>
-                        <td class='twelve' id='thirteenToTwentyFour'colspan=4>13-24</td>
-                        <td class='twelve' id='twentyFiveToThirtySix'colspan=4>25-36</td>
+                        <td class='twelve' id='betOneToTwelve' colspan=4>1-12</td>
+                        <td class='twelve' id='betThirteenToTwentyFour'colspan=4>13-24</td>
+                        <td class='twelve' id='betTwentyFiveToThirtySix'colspan=4>25-36</td>
                         <td></td>
                     </tr>
                   </tbody>
               </table>
-              <table class="table table-bordered" style='text-align: center; margin-top: 0px; margin-bottom: 0px;'>
+              <table class="table table-bordered" style='text-align: center; margin-bottom: 0px; table-layout: fixed;word-wrap: break-word; background-color: green;'>
                     <tbody>
                       <tr>
                           <td></td>
-                          <td class='' id='' colspan=2>1 - 18</td>
+                          <td class='' id='betOneToEighteen' colspan=2>1 - 18</td>
                           <td class='' id='betEven'colspan=2>Even</td>
-                          <td class='diamond' id='betRed'colspan=2 style='background-color:red;'>Red</td>
-                          <td class='diamond' id='betBlack' colspan=2 style='background-color:black;'>Black</td>
+                          <td class='' id='betRed'colspan=2 style='background-color:red;'>Red</td>
+                          <td class='' id='betBlack' colspan=2 style='background-color:black;'>Black</td>
                           <td class='' id='betOdd'colspan=2>Odd</td>
-                          <td class='' id=''colspan=2>19 - 36</td>
+                          <td class='' id='betNineteenToThirtySix'colspan=2>19 - 36</td>
                           <td></td>
                       </tr>
                     </tbody>
                 </table>
             </div>
-        <div id='results'>Results</div>
+            <button onclick='increaseBlackCount()'>Black</button><button onclick='increaseRedCount()'>Red</button><button onclick='increaseGreenCount()'>Green</button>
     </div>
   </body>
 </html>
+
+<script type="text/javascript">
+  // Load google charts
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  
+  var chartData;
+  var chart;
+  var options;
+
+  // Draw the chart and set the chart values
+  function drawChart() {
+    chartData = google.visualization.arrayToDataTable([
+    ['Colour', 'Occurrences'],
+    ['Black', 1],
+    ['Red', 1],
+    ['Green', 1]
+  ]);
+  
+    // Optional; add a title and set the width and height of the chart
+    options = {
+      'title':'Colour Occurrences', 
+      'width':550, 
+      'height':400, 
+      'slices':{
+        0: { color: 'black' }, 
+        1: { color: 'red' }, 
+        2: { color: 'green' }
+      }
+    };
+  
+    // Display the chart inside the <div> element with id="piechart"
+    chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(chartData, options);
+  }
+
+  function increaseBlackCount() {
+    console.log("Black: " + chartData['Hg'][0]['c'][1]['v']);
+    chartData['Hg'][0]['c'][1]['v'] += 1;
+    chart.draw(chartData, options);
+  }
+
+  function increaseRedCount() {
+    console.log("Red: " + chartData['Hg'][1]['c'][1]['v']);
+    chartData['Hg'][1]['c'][1]['v'] += 1;
+    chart.draw(chartData, options);
+  }
+
+  function increaseGreenCount() {
+    console.log("Green: " + chartData['Hg'][2]['c'][1]['v']);
+    chartData['Hg'][2]['c'][1]['v'] += 1;
+    chart.draw(chartData, options);
+  }
+
+</script>
